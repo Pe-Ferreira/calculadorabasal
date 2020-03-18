@@ -3,28 +3,64 @@
     <head>
         <meta charset="utf-8" />
         <title>Calcule sua taxa metabólica basal | Calculadora Basal</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="index.js"></script>
     </head>
     <body>
         <div>
-            <h1>SAIBA QUANTAS CALORIAS VOCÊ GASTA TODOS OS DIAS SEM FAZER ABSOLUTAMENTE NADA</h1>
-            <h2>Calculadora Basal | Taxa Metabólica Basal (TMB)</h2>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 style="text-align: center;" class="display-4">SAIBA QUANTAS CALORIAS VOCÊ GASTA TODOS OS DIAS SEM PRECISAR FAZER ABSOLUTAMENTE NADA</h1>
+                  <p style="text-align: center;" class="lead">Calculadora Basal | Taxa Metabólica Basal (TMB)</p>
+                </div>
+              </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm"></div>
+                <div class="col-sm">
+                    <form name="calculator">
+                        <div class="form-group">
+                            <legend class="col-form-label">Sexo:</legend>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="sexM" name="sex" value="m"/>
+                                <label class="form-check-label" for="sexM">Masculino</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="sexF" name="sex" value="f"/>
+                                <label class="form-check-label" for="sexF">Feminino</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">Peso(kg):</label>
+                            <input class="form-control" type="number" id="weight" name="weight" />
+                        </div>
+                        <div class="form-group">
+                            <label for="height">Altura(cm):</label>
+                            <input class="form-control" type="number" id="height" name="height" />
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Idade(anos):</label>
+                            <input class="form-control" type="number" id="age" name="age" />
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="button" class="btn btn-secondary" onclick="resetForm()">Reset</button>
+                            <button type="button" class="btn btn-primary" onclick="calculate()">Calcular TMB</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm"></div>
+            </div>
         </div>
         <div>
-            <form name="calculator" onsubmit="return calculate()">
-                Sexo:
-                <input type="radio" id="sexM" name="sex" value="m"/>
-                <label for="sexM">Masculino</label>
-                <input type="radio" id="sexF" name="sex" value="f"/>
-                <label for="sexF">Feminino</label>
-                Peso:
-                <input type="number" id="weight" name="weight" />
-                Altura:
-                <input type="number" id="height" name="height" />
-                Idade:
-                <input type="number" id="age" name="age" />
-                <input type="submit" value="Calcular TMB">
-            </form>
+            <h3 id="resultDisplay" hidden="true">Result Placeholder</h3>
         </div>
     </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </html>

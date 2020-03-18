@@ -11,5 +11,15 @@ function calculate() {
     } else if (sex === "f") {
         tmb = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
     }
-    alert(tmb);
+    var resultDisplay = document.getElementById('resultDisplay');
+    resultDisplay.hidden = false;
+    resultDisplay.innerHTML = 'Seu gasto calórico diário é ' + tmb + "cal";
   }
+
+function resetForm() {
+    document.forms["calculator"]["sex"].value = "";
+    document.forms["calculator"]["weight"].value = "";
+    document.forms["calculator"]["height"].value = "";
+    document.forms["calculator"]["age"].value = "";
+    document.getElementById('resultDisplay').hidden = true;
+}
