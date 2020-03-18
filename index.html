@@ -5,13 +5,14 @@
         <title>Calcule sua taxa metabólica basal | Calculadora Basal</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <link rel="stylesheet" href="index.css">
         <script src="index.js"></script>
     </head>
     <body>
-        <div>
+        <div class="container">
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                  <h1 style="text-align: center;" class="display-4">SAIBA QUANTAS CALORIAS VOCÊ GASTA TODOS OS DIAS SEM PRECISAR FAZER ABSOLUTAMENTE NADA</h1>
+                  <h3 style="text-align: center;" class="display-4">SAIBA QUANTAS CALORIAS VOCÊ GASTA TODOS OS DIAS SEM PRECISAR FAZER NENHUM EXERCÍCIO</h1>
                   <p style="text-align: center;" class="lead">Calculadora Basal | Taxa Metabólica Basal (TMB)</p>
                 </div>
               </div>
@@ -19,7 +20,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm"></div>
-                <div class="col-sm">
+                <div class="col-sm form-container">
                     <form name="calculator">
                         <div class="form-group">
                             <legend class="col-form-label">Sexo:</legend>
@@ -53,8 +54,25 @@
                 <div class="col-sm"></div>
             </div>
         </div>
-        <div>
-            <h3 id="resultDisplay" hidden="true">Result Placeholder</h3>
+        <br />
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-sm"></div>
+                <div class="col-sm result-container">
+                    <h3 id="resultDisplay" hidden="true">Result Placeholder</h3>
+                </div>
+                <div class="col-sm"></div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="container">
+            <nav class="nav">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">DigitalBeard 2020 - Todos os direitos reservados</a>
+              </nav>
         </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
