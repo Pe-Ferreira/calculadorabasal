@@ -8,9 +8,9 @@ function calculate() {
     if(sex === "") {
         alert("Por favor selecione uma opção na categoria Sexo.");
     } else if (sex === "m") {
-        tmb = 66 + (13.6 * weight) + (5 * height) - (6.8 * age);
+        tmb = 66 + (13.7 * weight) + (5 * height) - (6.8 * age);
     } else if (sex === "f") {
-        tmb = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
+        tmb = 655 + (9.6 * weight) + (1.7 * height) - (4.7 * age);
     }
     
     var resultDisplay = document.getElementById('resultDisplay');
